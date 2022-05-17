@@ -1,3 +1,5 @@
+const { isArguments } = require("underscore");
+
 var person = [];
 
 person.push({name: "Marcus", id: 22}, {name: "Pedro", id: 33});
@@ -9,6 +11,7 @@ var [{id: id1}, {id: id2}] = person;
 console.log(id1, id2);
 
 function createSusObject (name){
+    console.log(arguments);
     return {
         myName: name,
         color: name.split(" ") [1],
